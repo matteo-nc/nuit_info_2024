@@ -1,20 +1,22 @@
 <script setup lang="ts">
 
 import Question from "./Question.vue";
-import Reponse from "./Reponse.vue";
+import {QuestionModel} from "../game.model.ts";
+
+let questions = [
+    new QuestionModel('Pourquoi ?')
+        .withAnswer({labelA: '1', labelB: '2'})
+        .withAnswer({labelA: '2', labelB: '3'})
+        .withRightAnswer(1)
+
+];
+
+let question = questions[0];
 </script>
 
 <template>
-  <Question :visible="true" class="top-[200px] bg-gray-300 m-20">
+  <Question :question='question'>
   </Question>
-  <Reponse :visible="true" class="top-[200px] bg-gray-300 m-5">
-  </Reponse>
-
-  <Reponse :visible="true" class="top-[200px] bg-gray-300 m-5">
-  </Reponse>
-
-  <Reponse :visible="true" class="top-[200px] bg-gray-300 m-5">
-  </Reponse>
 </template>
 
 <style scoped>
