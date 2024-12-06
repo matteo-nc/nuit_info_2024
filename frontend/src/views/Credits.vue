@@ -177,38 +177,38 @@ export default {
     },
     firstHumanPicture() {
       return this.theme === "sea"
-        ? "/src/assets/hafez.jpg"
-        : "/src/assets/hafezSinge.jpg";
+        ? "/src/assets/hafez.png"
+        : "/src/assets/hafezSinge.png";
     },
     secondHumanPicture() {
       return this.theme === "sea"
-        ? "/src/assets/florian.jpg"
-        : "/src/assets/florianSinge.jpg";
+        ? "/src/assets/florian.png"
+        : "/src/assets/florianSinge.png";
     },
     thirdHumanPicture() {
       return this.theme === "sea"
-        ? "/src/assets/pol.jpg"
-        : "/src/assets/polSinge.jpg";
+        ? "/src/assets/pol.png"
+        : "/src/assets/polSinge.png";
     },
     fourthHumanPicture() {
       return this.theme === "sea"
-        ? "/src/assets/erwan.jpg"
-        : "/src/assets/erwanSinge.jpg";
+        ? "/src/assets/erwan.png"
+        : "/src/assets/erwanSinge.png";
     },
     fifthHumanPicture() {
       return this.theme === "sea"
-        ? "/src/assets/matteo.jpg"
-        : "/src/assets/matteoSinge.jpg";
+        ? "/src/assets/matteo.png"
+        : "/src/assets/matteoSinge.png";
     },
     sixthHumanPicture() {
       return this.theme === "sea"
-        ? "/src/assets/sam.jpg"
-        : "/src/assets/samSinge.jpg";
+        ? "/src/assets/sam.png"
+        : "/src/assets/samSinge.png";
     },
     seventhHumanPicture() {
       return this.theme === "sea"
-        ? "/src/assets/nathan.jpg"
-        : "/src/assets/nathanSinge.jpg";
+        ? "/src/assets/nathan.png"
+        : "/src/assets/nathanSinge.png";
     },
   },
   mounted() {
