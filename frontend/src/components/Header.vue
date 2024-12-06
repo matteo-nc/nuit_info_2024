@@ -19,6 +19,10 @@
         <img src="../assets/contact.svg" class="logo w-10 h-10 inline" alt="Crédits logo"/>
         <p class="text-white">Crédits</p>
       </RouterLink>
+
+      <RouterLink class="hover:bg-cyan-300 p-2 sm:p-3 md:p-5 rounded flex items-center gap-2" to="/video">
+        <p class="text-white">Vidéo</p>
+      </RouterLink>
     </nav>
   </header>
 </template>
