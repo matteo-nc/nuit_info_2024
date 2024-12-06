@@ -1,10 +1,36 @@
 <script setup lang="ts">
-import {QuestionModel} from "../game.model.ts";
+import {Answer, QuestionModel} from "../game.model.ts";
 import Reponse from "./Reponse.vue";
+import {ref} from "vue";
 
-defineProps<{
+const props = defineProps<{
   question: QuestionModel
 }>();
+const emit = defineEmits<{(e: 'resetQuestions') : void}>();
+
+const reset = ref(false);
+
+const showReloadQuestions = ref(false);
+const selectedQuestion = ref<Map<number, boolean>>(new Map());
+
+const afficherBouton = () => {
+  showReloadQuestions.value = true;
+}
+
+const resetQuestion = () => {
+  showReloadQuestions.value = false;
+  selectedQuestion.value = new Map();
+
+  // Déclenche le reset
+  reset.value = true;
+  setTimeout(() => {
+    reset.value = false;
+  }, 0);
+
+  emit("resetQuestions");
+};
+
+
 
 
 </script>
@@ -14,9 +40,21 @@ defineProps<{
     <h1 class="text-3xl">{{question.label()}}</h1>
 
     <div v-for="(answer) in question.answers()" class="flex flex-col gap-5">
-      <Reponse :answer="answer" :question="question" />
+      <Reponse
+          :answer="answer"
+          :selected="selectedQuestion.get(answer.id)"
+          :question="question"
+          :reset="reset"
+          @on-answer-selected="afficherBouton"
+      />
     </div>
   </div>
+
+  <button v-on:click="resetQuestion" v-if="showReloadQuestions">
+    Suivant
+  </button>
+
+
 
 
 
