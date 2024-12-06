@@ -4,33 +4,51 @@ import Question from "../components/Question.vue";
 import {QuestionModel} from "../game.model.ts";
 import {ref} from "vue";
 
-const question = ref<QuestionModel>(null);
-
-const reset = ref(false);
-
 function getRandomInt(max: number) {
   return Math.floor(Math.random() * max);
 }
 
+const shuffle = () => {
+  let questions = [
+    new QuestionModel("Sélectionnez les mots qui ont une similitude")
+      .withAnswer({labelA: 'sang', labelB: 'courant marins'})
+      .withAnswer({labelA: 'sang', labelB: 'vagues'})
+      .withRightAnswer(0)
+    ,
+    new QuestionModel('Sélectionnez les mots qui ont une similitude')
+      .withAnswer({labelA: 'cellule corp humain', labelB: 'biodiversité'})
+      .withAnswer({labelA: 'iceberg', labelB: 'crâne'})
+      .withRightAnswer(0)
+    ,
+    new QuestionModel('Sélectionnez les mots qui ont une similitude')
+      .withAnswer({labelA: 'Jambes', labelB: 'vagues'})
+      .withAnswer({labelA: 'jambes', labelB: 'courant marins'})
+      .withRightAnswer(0)
+    ,
+    new QuestionModel('Sélectionnez les mots qui ont une similitude')
+      .withAnswer({labelA: 'Phytoplanctons', labelB: 'poumons'})
+      .withAnswer({labelA: 'intestins', labelB: 'phytoplanctons'})
+      .withRightAnswer(0)
+    ,
+    new QuestionModel('Sélectionnez les mots qui ont une similitude')
+      .withAnswer({labelA: 'cerveau', labelB: 'abysses'})
+      .withAnswer({labelA: 'cerveau', labelB: 'iceberg'})
+      .withRightAnswer(0)
+    ,
+  ];
+  return questions[getRandomInt(questions.length)];
+
+}
+
+const question = ref<QuestionModel>(shuffle());
+
+
 
 
 const reinitialiserQuestion = () => {
-  let questions = [
-    new QuestionModel('Pourquoi ?')
-      .withAnswer({labelA: '1', labelB: '2'})
-      .withAnswer({labelA: '2', labelB: '3'})
-      .withRightAnswer(1)
-    ,
-    new QuestionModel('Pourquoi 2 ?')
-      .withAnswer({labelA: '1', labelB: '2'})
-      .withAnswer({labelA: '2', labelB: '3'})
-      .withRightAnswer(1)
-    ,
-  ];
-  question.value = questions[getRandomInt(questions.length)];
-}
 
-reinitialiserQuestion();
+  question.value = shuffle();
+}
 
 
 
