@@ -1,6 +1,6 @@
 <script setup lang="ts">
 
-import Popup from "./Popup.vue";
+import Popup from "../components/Popup.vue";
 </script>
 
 <template>
