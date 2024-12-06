@@ -5,9 +5,9 @@ defineProps<{
 </script>
 
 <template>
-  <Questions :open='visible' class='overflow-auto p-10 rounded-xl border-2 border-black'>
-    { questions }
-  </Questions>
+  <div :open="visible" class="w-1/2 max-w-md overflow-auto p-5 rounded-xl border-2 border-black mx-auto">
+    {{ questions }}
+  </div>
 </template>
 
 <style scoped>
