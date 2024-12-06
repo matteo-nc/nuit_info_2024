@@ -6,22 +6,22 @@
     <div class="containerDauphinHaut">
       <div class="container delay-2">
         <img
-          src="/src/assets/dolphin.png"
+          :src="characterImage"
           alt="Dolphin"   
           class="dolphin"
         />
       </div>
       <div class="container delay-4">
         <img
-          src="/src/assets/dolphin.png"
-          alt="Dolphin"   
+        :src="characterImage"
+        alt="Dolphin"   
           class="dolphin"
         />
       </div>
       <div class="container delay-6">
         <img
-          src="/src/assets/dolphin.png"
-          alt="Dolphin"   
+        :src="characterImage"
+        alt="Dolphin"   
           class="dolphin"
         />
       </div>
@@ -29,29 +29,29 @@
     <div class="containerDauphinBas">
       <div class="container delay-1">
         <img
-          src="/src/assets/dolphin.png"
-          alt="Dolphin"   
+        :src="characterImage"
+        alt="Dolphin"   
           class="dolphin"
         />
       </div>
       <div class="container delay-3">
         <img
-          src="/src/assets/dolphin.png"
-          alt="Dolphin"   
+        :src="characterImage"
+        alt="Dolphin"   
           class="dolphin"
         />
       </div>
       <div class="container delay-5">
         <img
-          src="/src/assets/dolphin.png"
-          alt="Dolphin"   
+        :src="characterImage"
+        alt="Dolphin"   
           class="dolphin"
         />
       </div>
       <div class="container delay-7">
         <img
-          src="/src/assets/dolphin.png"
-          alt="Dolphin"   
+        :src="characterImage"
+        alt="Dolphin"   
           class="dolphin"
         />
       </div>
