@@ -3,6 +3,8 @@
 import Question from "../components/Question.vue";
 import {QuestionModel} from "../game.model.ts";
 import {ref} from "vue";
+import RunAwayInput from "@/components/RunAwayInput.vue";
+import RunAwayButton from "@/components/RunAwayButton.vue";
 
 function getRandomInt(max: number) {
   return Math.floor(Math.random() * max);
@@ -57,6 +59,12 @@ const reinitialiserQuestion = () => {
 <template>
   <Question :question='question' @reset-questions="reinitialiserQuestion">
   </Question>
+
+  <div>
+    Tu veux un indice ?
+    <RunAwayInput placeholder="Met A1B2C3 si tu peux" />
+    <RunAwayButton text="Donne moi l'indice !" />
+  </div>
 </template>
 
 <style scoped>
