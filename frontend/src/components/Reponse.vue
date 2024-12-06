@@ -40,11 +40,14 @@ watch(
 </script>
 
 <template>
-  <div
-      :class="[currentColor, 'flex flex-row justify-between w-96 px-5 py-10 rounded-xl border-2 border-black']"
-      @click="onClicked"
-  >
-    <span>{{ answer.labelA }}</span>
-    <span>{{ answer.labelB }}</span>
-  </div>
+  <a href="#">
+    <div
+        :class="[currentColor, 'flex flex-row justify-between w-96 px-5 py-10 rounded-xl border-2 border-black hover:border-green-500']"
+        @click="onClicked"
+    >
+      <span>{{ answer.labelA }}</span>
+      <span>{{ answer.labelB }}</span>
+    </div>
+  </a>
+
 </template>
