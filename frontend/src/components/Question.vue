@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import {Answer, QuestionModel} from "../game.model.ts";
+import {QuestionModel} from "../game.model.ts";
 import Reponse from "./Reponse.vue";
 import {ref} from "vue";
 
-const props = defineProps<{
+defineProps<{
   question: QuestionModel
 }>();
 const emit = defineEmits<{(e: 'resetQuestions') : void}>();
@@ -42,7 +42,6 @@ const resetQuestion = () => {
     <div v-for="(answer) in question.answers()" class="flex flex-col gap-5">
       <Reponse
           :answer="answer"
-          :selected="selectedQuestion.get(answer.id)"
           :question="question"
           :reset="reset"
           @on-answer-selected="afficherBouton"

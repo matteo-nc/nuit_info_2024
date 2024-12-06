@@ -1,12 +1,12 @@
 <script setup lang="ts">
 import { ref, watch } from "vue";
-import { Answer, QuestionModel } from "../game.model.ts";
+import {QuestionModel } from "../game.model.ts";
+import type {Answer} from "../game.model.ts";
 
 // Props
 const props = defineProps<{
   answer: Answer;
   question: QuestionModel;
-  selected: boolean;
   reset: boolean;
 }>();
 

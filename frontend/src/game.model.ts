@@ -13,9 +13,7 @@ export class QuestionModel {
     closed(){return this._closed;}
 
     answers(){
-        {
-            return this._answers;
-        }
+        return this._answers;
     }
 
     constructor(label:string) {
