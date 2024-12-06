@@ -1,7 +1,45 @@
 <script>
-import Popup from "@/components/Popup.vue";
+  import Popup from "@/components/Popup.vue";
 
-import Popup from "./Popup.vue";
+  export default {
+    name: 'home',
+    components: {Popup},
+    props: {
+      msg: {
+      type: String,
+      required: true
+      }
+    },
+    data() {
+      return {
+        humain: null,
+        ocean: null,
+        switch: null,
+        humainVisible: true,
+        humainStyle: {
+          position: 'relative',
+          height: '60rem',
+          width: '42rem',
+        },
+        oceanStyle: {
+          position: 'relative',
+          height: '60rem',
+          width: '42rem',
+        }
+      };
+    },
+    methods: {
+      toggleOcean() {
+        const switchElement = this.$refs.switch;
+        if (!switchElement) {
+          return;
+        }
+
+        let checked = switchElement.checked;
+        this.humainVisible = !checked;
+      }
+    },
+  };
 </script>
 
 <template>
