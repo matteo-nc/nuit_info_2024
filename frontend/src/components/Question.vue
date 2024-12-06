@@ -50,7 +50,7 @@ const resetQuestion = () => {
     </div>
   </div>
 
-  <button v-on:click="resetQuestion" v-if="showReloadQuestions">
+  <button v-on:click="resetQuestion" v-if="showReloadQuestions" class="bg-blue-500 rounded-xl p-5 m-5 text-white">
     Suivant
   </button>
 
